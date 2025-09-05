@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "searxng": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--add-host=host.docker.internal:host-gateway",
+        "-e",
+        "SEARXNG_URL=http://host.docker.internal:8080",
+        "mcpcommunity/ihor-sokoliuk-mcp-searxng:latest"
+      ]
+    }
+  }
+}

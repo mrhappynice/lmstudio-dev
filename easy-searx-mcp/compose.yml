@@ -1,0 +1,16 @@
+
+services:
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    ports:
+      - "0.0.0.0:8080:8080"
+    restart: unless-stopped
+    volumes:
+      - ./searxng/settings.yml:/etc/searxng/settings.yml
+    healthcheck:
+      # SearxNG has no /healthz; just fetch "/" and look for 'SearXNG'
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/ | grep -qi SearXNG"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
