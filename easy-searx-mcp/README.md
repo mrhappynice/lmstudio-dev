@@ -6,7 +6,7 @@
   ```bash
   git clone https://github.com/mrhappynice/lmstudio-dev.git
   ```
-- run docker compose in directory with compose.yml:
+- run docker compose in this directory (easy-searx-mcp) with compose.yml:
   ```bash
   docker compose up -d
   ```
