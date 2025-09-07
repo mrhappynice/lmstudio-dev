@@ -1,0 +1,5 @@
+# SearxNG JSON API (should return JSON)
+curl "http://localhost:8080/search?q=hello&format=json" | head
+
+# MCP server health
+curl "http://localhost:3000/health"
