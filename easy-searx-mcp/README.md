@@ -10,6 +10,11 @@
   ```bash
   docker compose up -d
   ```
+  - this runs the searxng server, the mcp docker we will pull and LMS will start through mcp.json
+- Pull the mcp-searxng docker:
+  ```bash
+  docker pull mcpcommunity/ihor-sokoliuk-mcp-searxng
+  ```
 - copy mcp json into LM Studio, then restart.
 - Switch on the plugin/mcp in chat, enjoy :)
   
