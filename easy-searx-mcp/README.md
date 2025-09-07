@@ -11,6 +11,15 @@
   docker compose up -d
   ```
   - this runs the searxng server, the mcp docker we will pull and LMS will start through mcp.json
+  
+- Now run the following to ensure lms can run the docker:
+  ```bash
+  sudo usermod -aG docker $USER
+  newgrp docker
+  groups | grep docker
+  docker ps
+  ```
+  - 'docker ps' should show without sudo
 - Pull the mcp-searxng docker:
   ```bash
   docker pull mcpcommunity/ihor-sokoliuk-mcp-searxng
